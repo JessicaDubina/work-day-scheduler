@@ -13,7 +13,7 @@ Click inside the text field for the hour you would like to schedule an event. En
 
 The planner is color coded to show past events, highlight the current hour, and any future events. 
 
-![image of a workday with entered events]()
+![image of a workday with entered events](./images/screen-shot-working-page.png)
 
 ## Credits
 N/A
