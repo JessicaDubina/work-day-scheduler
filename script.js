@@ -23,7 +23,8 @@
 
     
   //calculate current time and compare to each time slow to set to past, present, or future
-  let now = dayjs().format("H:mm");
+  let now = dayjs().hour();
+  console.log(now);
 
   let scheduleEl = $(".container-lg").children(".row");
   console.log(scheduleEl);
@@ -32,6 +33,16 @@
     let hourX = $(scheduleEl[i]).attr("id");
     let hourOnly = hourX.slice(5);
     console.log(hourOnly);  
+
+    //conditional to assign past/present/future class
+    if (hourOnly < now) {
+      $(scheduleEl[i]).addClass(".past");
+    } else if (hourOnly > now) {
+      $(scheduleEl[i]).addClass(".future");
+    } else {
+      $(scheduleEl[i]).addClass(".present");
+    }
+
   }
 
 
